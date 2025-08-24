@@ -4,7 +4,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
 # Load dataset and train model (you can also load a saved model)
-df = pd.read_csv(r"F:\HackNodeIndiaProject\CompleteCaloriesProject\calories.csv")
+df = pd.read_csv("calories.csv")
 
 # Encode gender
 df['Gender'] = df['Gender'].replace({'male': 0, 'female': 1})
@@ -59,3 +59,4 @@ if st.button("Calculate"):
     # Calories to gain weight (500 kcal surplus for ~0.5 kg/week gain)
     cal_to_gain = tdee + 500
     st.write(f"To gain weight (~0.5 kg per week), consume approx: {cal_to_gain:.2f} kcal/day")
+
